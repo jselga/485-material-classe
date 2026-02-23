@@ -133,7 +133,7 @@ Practicar herència amb mètodes **sobreescrits** que calculin imports diferents
 
 ### `ArticleRoba`
 - Afegeix `temporada`
-- Sobreescriu `calcularPreuFinal()` aplicant descompte segons temporada
+- Sobreescriu `calcularPreuFinal()` aplicant descompte segons temporada (p.e. si està fora de temporada té un descompte del 10%)
 
 ---
 
