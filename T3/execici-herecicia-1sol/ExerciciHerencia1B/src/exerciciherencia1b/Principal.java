@@ -28,17 +28,21 @@ public class Principal {
                 11, "Jordi", "Vila", "44444444D", "600777888",
                 "jordi@example.com", "Bàsic", LocalDate.of(2024, 1, 15), 199.99
         ));
+        e.copia();
 
+        System.out.println("\nMostrem l'empresa amb array de cada tipus");
         // Mostrar tot
         e.mostrar();
-
+        System.out.println("\nMostrem l'empresa amb array de Persones");
+        e.dades();
+        System.out.println("\nOperacions de cerca");
         // Cercar
         Treballador t = e.cercarTreballadorPerDni("22222222B");
         System.out.println("Cercar treballador DNI 22222222B: " + (t != null ? t : "No trobat"));
 
         Client c = e.cercarClientPerDni("33333333C");
         System.out.println("Cercar client DNI 33333333C: " + (c != null ? c : "No trobat"));
-
+        System.out.println("\nOperacions d'eliminació");
         // Eliminar
         boolean eliminatT = e.eliminarTreballadorPerDni("11111111A");
         System.out.println("Eliminar treballador DNI 11111111A: " + (eliminatT ? "OK" : "No trobat"));
@@ -49,5 +53,6 @@ public class Principal {
         // Tornar a mostrar
         System.out.println();
         e.mostrar();
+
     }
 }

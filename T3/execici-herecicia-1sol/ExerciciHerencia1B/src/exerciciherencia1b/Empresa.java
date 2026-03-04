@@ -10,13 +10,21 @@ class Empresa {
 
     private ArrayList<Treballador> treballadors = new ArrayList<>();
     private ArrayList<Client> clients = new ArrayList<>();
+    private ArrayList<Persona> persones = new ArrayList<>();
 
     public Empresa(String nom, String cif, String adreca) {
         this.nom = nom;
         this.cif = cif;
         this.adreca = adreca;
     }
-
+    public boolean  afegirPersona(Persona p){
+        
+        return persones.add(p);
+    }
+    public void copia(){
+        persones.addAll(clients);
+        persones.addAll(treballadors);
+    }
     public void afegirTreballador(Treballador t) {
 
         if (cercarTreballadorPerDni(t.getDni()) == null) {
@@ -121,5 +129,16 @@ class Empresa {
         for (Client c : clients) {
             System.out.println(c);
         }
+    }
+        public void dades() {
+        System.out.println("Empresa: " + nom + " (CIF: " + cif + ")");
+        System.out.println("Adreça: " + adreca);
+
+       
+        for (Persona p : persones) {
+            System.out.println(p);
+        }
+
+        
     }
 }
