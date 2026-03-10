@@ -1,7 +1,7 @@
 # 📚 Material de Classe – Mòdul 0485 Programació
 ## Tema 3 – Col·leccions en Java
 
-Aquest repositori conté el **material utilitzat a classe** per treballar el **Tema 3: Col·leccions en Java** dins del mòdul **0485 - Programació** del cicle formatiu de **Desenvolupament d'Aplicacions Multiplataforma (DAM)**.
+Aquest repositori conté el **material utilitzat a classe** per treballar el **Tema 3: Col·leccions en Java** dins del mòdul **0485 - Programació** del cicles formatius de **Desenvolupament d'Aplicacions Multiplataforma (DAM)** **Desenvolupament d'Aplicacions Web (DAW)**.
 
 L'objectiu és disposar d'exemples de codi, exercicis i materials de suport per practicar amb les principals estructures de col·leccions de Java.
 
