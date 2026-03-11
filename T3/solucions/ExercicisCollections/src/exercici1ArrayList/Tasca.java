@@ -14,10 +14,10 @@ public class Tasca {
     private int prioritat;
     private boolean completada;
 
-    public Tasca(String titol, int prioritat, boolean completada) {
+    public Tasca(String titol, int prioritat) {
         this.titol = titol;
         this.prioritat = prioritat;
-        this.completada = completada;
+        this.completada =false;
     }
 
     public boolean isCompletada() {
@@ -48,5 +48,7 @@ public class Tasca {
     public String toString() {
         return "Tasca{" + "titol=" + titol + ", prioritat=" + prioritat + ", completada=" + completada + '}';
     }
+
+    
 
 }
