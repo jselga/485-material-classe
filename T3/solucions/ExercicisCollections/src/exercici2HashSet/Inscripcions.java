@@ -12,7 +12,7 @@ import java.util.HashSet;
  */
 public class Inscripcions {
 
-    HashSet<Participant> participants;
+    private HashSet<Participant> participants;
 
     // El contructor instancia la Col·lecció quan es crea una instància Inscripcions
     public Inscripcions() {
@@ -20,9 +20,12 @@ public class Inscripcions {
     }
 
     public boolean inscriure(Participant p) {
+        //Ens assegurem que tots els correus estan en minúscules
+        p.setEmail(p.getEmail().toLowerCase());
         return participants.add(p);
 
     }
+    //Funció reutilitzable cercarPerEmail
 
     public Participant cercarPerEmail(String email) {
         for (Participant participant : participants) {
@@ -38,10 +41,7 @@ public class Inscripcions {
     }
 
     public boolean estaInscrit(String email) {
-        if (cercarPerEmail(email) == null) {
-            return false;
-        }
-        return true;
+        return cercarPerEmail(email) != null;
     }
 
     public int total() {
@@ -49,6 +49,7 @@ public class Inscripcions {
     }
 
     public void mostrar() {
+        System.out.println("----- Participants registrats -----");
         for (Participant participant : participants) {
             System.out.println(participant);
         }

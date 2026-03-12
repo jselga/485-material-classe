@@ -4,8 +4,6 @@
  */
 package exercici2HashSet;
 
-import java.util.Objects;
-
 /**
  *
  * @author jordi
@@ -35,12 +33,33 @@ public class Participant {
     public void setNom(String nom) {
         this.nom = nom;
     }
+//hashCode i equals per defecte amb insert code:
 
+//    @Override
+//    public int hashCode() {
+//        int hash = 3;
+//        hash = 13 * hash + Objects.hashCode(this.email);
+//        return hash;
+//    }
+//
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj) {
+//            return true;
+//        }
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+//        final Participant other = (Participant) obj;
+//        return Objects.equals(this.email, other.email);
+//    }
+//hashCode i equals personalitzat per tenir ser coherent amb ingoreCase:
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 13 * hash + Objects.hashCode(this.email);
-        return hash;
+        return email.toLowerCase().hashCode();
     }
 
     @Override
@@ -55,12 +74,12 @@ public class Participant {
             return false;
         }
         final Participant other = (Participant) obj;
-        return Objects.equals(this.email, other.email);
+        return email.equalsIgnoreCase(other.email);
     }
 
     @Override
     public String toString() {
-        return "Participant{" + "nom=" + nom + ", email=" + email + '}';
+        return String.format("Nom: %-15s | Email: %s", nom, email);
     }
 
 }
