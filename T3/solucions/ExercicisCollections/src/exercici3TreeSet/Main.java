@@ -25,12 +25,16 @@ public class Main {
         jugadors.afegir(new Jugador("Urbosa", 300));
         jugadors.afegir(new Jugador("Link", 400));   // nick repetit
 
+        System.out.println("=== RANKING COMPLET ===");
+        jugadors.mostrar();
+
         System.out.println("Primer: " + jugadors.primer());
         System.out.println("Últim: " + jugadors.ultim());
-
+        System.out.println("\n=== TOP 3 ===");
         jugadors.mostrarTopN(3);
 
+        System.out.println("\n=== JUGADORS ENTRE 50 I 100 PUNTS ===");
         jugadors.mostrarEntrePunts(50, 100);
-    }
 
+    }
 }

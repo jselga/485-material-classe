@@ -40,8 +40,12 @@ public class Jugador implements Comparable<Jugador> {
     }
 
     @Override
-    public int compareTo(Jugador jugador) {
-        return this.nick.compareTo(jugador.nick);
+    public int compareTo(Jugador altre) {
+        if (this.punts != altre.punts) {
+            return Integer.compare(altre.punts, this.punts);
+        }
+
+        return this.nick.compareToIgnoreCase(altre.nick);
     }
 
 }
