@@ -63,6 +63,53 @@
 
 ---
 
+
+# HashSet i TreeSet: característiques i funcionalitats principals
+
+## 1) HashSet
+
+### Què és?
+`HashSet<E>` és una implementació de `Set<E>` basada en una **taula hash**. Serveix per guardar elements **sense duplicats** i amb operacions molt ràpides.
+
+### Característiques clau
+- **No permet duplicats** (dos elements “iguals” segons `equals()` no poden coexistir).
+- **No garanteix cap ordre** en iterar (pot canviar).
+- Operacions típiques **molt ràpides** en mitjana: `add`, `remove`, `contains`.
+
+> Important: perquè funcioni bé, els objectes han de tenir `equals()` i `hashCode()` ben implementats i coherents.
+
+### Funcionalitats (mètodes més útils)
+- `add(e)` → afegeix si no hi era
+- `contains(e)` → comprova si hi és
+- `remove(e)` → elimina si existeix
+- `size()`, `isEmpty()`, `clear()`
+- `iterator()` / `for-each` per recórrer
+
+### Quan és ideal?
+- Quan vols **evitar duplicats** i **no t’importa l’ordre**.
+- Quan necessites fer molts `contains()` ràpids.
+
+---
+
+## 2) TreeSet
+
+### Què és?
+`TreeSet<E>` és una implementació de `Set<E>` basada en un **arbre ordenat**. Manté els elements **ordenats** sempre.
+
+### Característiques clau
+- **No permet duplicats**.
+- **Manté els elements ordenats** automàticament (segons l’ordre: `compareTo`/`compare` considera “igual” quan retorna 0).
+- Operacions típiques: `add`, `remove`, `contains` (més lent que `HashSet`, però amb ordre).
+
+### Quan és ideal?
+- Quan necessites el conjunt **sempre ordenat**.
+- Quan necessites consultar **rangs** (per exemple, tots els valors entre A i B).
+
+## Diferència ràpida (cheet sheet) 
+- **HashSet**: ràpid, sense ordre.
+- **TreeSet**: ordenat, permet rangs, una mica més lent.
+
+---
 # HashMap i TreeMap: característiques i funcionalitats principals
 
 ## 1) HashMap
@@ -110,53 +157,8 @@
 - Quan necessites el map **ordenat per clau**.
 - Quan necessites fer **consultes per rang** (ex.: totes les claus entre A i M).
 
-## Diferència ràpida (chuleta)
+## Diferència ràpida (cheet sheet)
 - **HashMap**: més ràpid, **sense ordre**.
 - **TreeMap**: una mica més lent, **claus ordenades** i **rangs**.
 
 ---
-
-# HashSet i TreeSet: característiques i funcionalitats principals
-
-## 1) HashSet
-
-### Què és?
-`HashSet<E>` és una implementació de `Set<E>` basada en una **taula hash**. Serveix per guardar elements **sense duplicats** i amb operacions molt ràpides.
-
-### Característiques clau
-- **No permet duplicats** (dos elements “iguals” segons `equals()` no poden coexistir).
-- **No garanteix cap ordre** en iterar (pot canviar).
-- Operacions típiques **molt ràpides** en mitjana: `add`, `remove`, `contains`.
-
-> Important: perquè funcioni bé, els objectes han de tenir `equals()` i `hashCode()` ben implementats i coherents.
-
-### Funcionalitats (mètodes més útils)
-- `add(e)` → afegeix si no hi era
-- `contains(e)` → comprova si hi és
-- `remove(e)` → elimina si existeix
-- `size()`, `isEmpty()`, `clear()`
-- `iterator()` / `for-each` per recórrer
-
-### Quan és ideal?
-- Quan vols **evitar duplicats** i **no t’importa l’ordre**.
-- Quan necessites fer molts `contains()` ràpids.
-
----
-
-## 2) TreeSet
-
-### Què és?
-`TreeSet<E>` és una implementació de `Set<E>` basada en un **arbre ordenat**. Manté els elements **ordenats** sempre.
-
-### Característiques clau
-- **No permet duplicats**.
-- **Manté els elements ordenats** automàticament (segons l’ordre: `compareTo`/`Comparator` considera “igual” quan retorna 0).
-- Operacions típiques: `add`, `remove`, `contains` (més lent que `HashSet`, però amb ordre).
-
-### Quan és ideal?
-- Quan necessites el conjunt **sempre ordenat**.
-- Quan necessites consultar **rangs** (per exemple, tots els valors entre A i B).
-
-## Diferència ràpida (cheet sheet) 
-- **HashSet**: ràpid, sense ordre.
-- **TreeSet**: ordenat, permet rangs, una mica més lent.
