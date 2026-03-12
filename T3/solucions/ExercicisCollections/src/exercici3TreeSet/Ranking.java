@@ -12,7 +12,7 @@ import java.util.TreeSet;
  */
 public class Ranking {
 
-    TreeSet<Jugador> jugadors = new TreeSet<>();
+    TreeSet<Jugador> jugadors = new TreeSet<>(new ComparatorJugador());
 
     public void afegir(Jugador j) {
         if (jugadors.add(j)) {
@@ -23,6 +23,7 @@ public class Ranking {
     }
 
     public void mostrarTopN(int n) {
+
         int cnt = 0;
         for (Jugador jugador : jugadors) {
             if (cnt < n) {

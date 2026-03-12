@@ -23,7 +23,7 @@ public class Main {
         jugadors.afegir(new Jugador("Daruk", 80));
         jugadors.afegir(new Jugador("Revali", 90)); // punts repetits
         jugadors.afegir(new Jugador("Urbosa", 300));
-        jugadors.afegir(new Jugador("Link", 400));   // nick repetit
+        jugadors.afegir(new Jugador("Link", 120));   // nick i punts repetits
 
         System.out.println("=== RANKING COMPLET ===");
         jugadors.mostrar();
