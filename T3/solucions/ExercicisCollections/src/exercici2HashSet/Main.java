@@ -28,6 +28,7 @@ public class Main {
         i1.inscriure(p4);
         i1.inscriure(p5);
         System.out.println("Mostra de totes les persones participants");
+        System.out.printf("Nombre de participants: %d\n", i1.total());
         i1.mostrar();
         String emailBaixa = "clara@mail.com";
         if (i1.donarDeBaixaPerEmail(emailBaixa)) {

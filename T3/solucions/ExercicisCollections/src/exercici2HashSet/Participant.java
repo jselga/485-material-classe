@@ -58,4 +58,9 @@ public class Participant {
         return Objects.equals(this.email, other.email);
     }
 
+    @Override
+    public String toString() {
+        return "Participant{" + "nom=" + nom + ", email=" + email + '}';
+    }
+
 }

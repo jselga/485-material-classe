@@ -20,23 +20,38 @@ public class Inscripcions {
     }
 
     public boolean inscriure(Participant p) {
-//    (retorna false si ja existeix)
-        return false;
+        return participants.add(p);
+
+    }
+
+    public Participant cercarPerEmail(String email) {
+        for (Participant participant : participants) {
+            if (participant.getEmail().equalsIgnoreCase(email)) {
+                return participant;
+            }
+        }
+        return null;
     }
 
     public boolean donarDeBaixaPerEmail(String email) {
-        return false;
+        return participants.remove(cercarPerEmail(email));
     }
 
     public boolean estaInscrit(String email) {
-        return false;
+        if (cercarPerEmail(email) == null) {
+            return false;
+        }
+        return true;
     }
 
     public int total() {
-        return 0;
+        return participants.size();
     }
 
     public void mostrar() {
+        for (Participant participant : participants) {
+            System.out.println(participant);
+        }
 
     }
 
