@@ -20,7 +20,15 @@ public class Diccionari {
     }
 
     public void afegir(Paraula p) {
-        paraules.put(p.getNom().toLowerCase(), p);
+
+        if (!paraules.containsKey(p.getNom().toLowerCase())) {
+
+            paraules.put(p.getNom().toLowerCase(), p);
+            System.out.printf("Registre afegit amb èxit\n");
+        } else {
+            System.out.println("Clau repetida no s'afegeix");
+        }
+
     }
 
     public void eliminar(String nom) {
@@ -33,6 +41,7 @@ public class Diccionari {
 
     public void mostrar() {
         for (Map.Entry<String, Paraula> entry : paraules.entrySet()) {
+            System.out.printf("Clau: %s|", entry.getKey());
             System.out.println(entry.getValue());
         }
     }

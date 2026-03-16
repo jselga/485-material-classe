@@ -19,6 +19,8 @@ public class Principal {
         dic.afegir(new Paraula("Casa", "Lloc on viu la gent", "CAT"));
         dic.afegir(new Paraula("House", "Building for human habitation", "EN"));
         dic.afegir(new Paraula("Perro", "Animal doméstico", "ES"));
+        dic.afegir(new Paraula("Gato", "Animal doméstico felino", "ES"));
+        dic.afegir(new Paraula("Gato", "Animal doméstico 2", "ES"));
 
         System.out.println("Buscar:");
         System.out.println(dic.cercar("casa"));
