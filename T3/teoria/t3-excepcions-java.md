@@ -1,6 +1,6 @@
 # Tema 3: Programació Orientada a Objectes i Llibreries
 
-## Secció 4: Execepcions en Java
+## Secció 4: Excepcions en Java
 
 ## Idea clau
 
