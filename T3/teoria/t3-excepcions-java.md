@@ -155,7 +155,14 @@ catch (ArrayIndexOutOfBoundsException e) {
 
 - `getMessage()` → missatge concret
 - `toString()` → tipus + missatge
-- `printStackTrace()` → rastre complet de l'error (el que ens sol sortir quan un programa falla i no hem capturat cap execepció)
+- `printStackTrace()` → rastre complet de l'error (el que ens sol sortir quan un programa falla i no hem capturat cap excepció)
+#### Exemple Stack Trace
+```bash
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
+	at exemplesexcepcions.Exemple01_NoCapturada.main(Exemple01_NoCapturada.java:10)
+/home/jordi/snap/netbeans/common/142/executor-snippets/run.xml:111: The following error occurred while executing this line:
+/home/jordi/snap/netbeans/common/142/executor-snippets/run.xml:68: Java returned: 1
+```  
 
 ---
 
