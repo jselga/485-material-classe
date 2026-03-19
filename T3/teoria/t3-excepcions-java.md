@@ -255,6 +255,22 @@ Això **no captura** una `ArrayIndexOutOfBoundsException`.
 - Es poden crear excepcions pròpies per donar més significat al problema.
 
 ---
+## 11. Exemples
+
+1. [Exemple no capturat](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple01_NoCapturada.java)
+2. [Exemple capturat](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple02_Capturada.java)
+3. [Exemple amb `finally`](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple03_CatchIncorrecteIFinally.java)
+4. [Propagació](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple04_PropagacioFinsMain.java)
+5. [Captura en mètode superior](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple05_CapturaEnMetodeSuperior.java)
+6. [Informació de l'excepció](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple06_InfoExcepcio.java)
+7. [Checked exceptions de fitxers](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple07_CheckedSenseGestionar.java)
+8. Delegació amb `throws`
+   1. [No gestionada](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple08_Prova1_NoCompila.java)
+   2. [Gestió parcial](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple08_Prova2_GestioParcial.java)
+   3. [Gestió completa](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple08_Prova3_GestioCompleta.java)
+9.  [`throw` amb checked](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple09_ThrowsChecked.java)
+10. [`throw` amb runtime](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple10_ThrowsRuntime.java)
+11. [Excepció personalitzada](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple11_ExcepcioPersonalitzada.java)
 
 
 
