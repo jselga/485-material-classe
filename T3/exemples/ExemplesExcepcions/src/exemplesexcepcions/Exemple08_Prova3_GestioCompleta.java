@@ -9,7 +9,7 @@ public class Exemple08_Prova3_GestioCompleta {
         ServeiFitxers servei = new ServeiFitxers();
 
         try {
-            servei.crearFitxerBuit("sortida.txt");
+            servei.crearFitxerBuit("/something/sortida.txt");
             System.out.println("Hem tornat del metode crearFitxerBuit().");
         } catch (FileNotFoundException e) {
             System.out.println("No s'ha pogut crear el fitxer.");
