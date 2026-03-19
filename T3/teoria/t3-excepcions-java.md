@@ -95,32 +95,8 @@ S'executa sempre, hi hagi excepció o no.
 
 ---
 
-## 4. Capturar o delegar?
 
-### Capturar
-Quan el mètode sap què fer amb l'error.
-
-```java
-try {
-    servei.crearFitxerBuit("sortida.txt");
-} catch (IOException e) {
-    System.out.println("No s'ha pogut crear el fitxer.");
-}
-```
-
-### Delegar
-Quan el mètode no resol el problema i el passa al mètode superior.
-
-```java
-public void crearFitxerBuit(String nomFitxer) throws IOException {
-    FileOutputStream fitxer = new FileOutputStream(nomFitxer);
-    fitxer.close();
-}
-```
-
----
-
-## 5. Propagació d'excepcions
+## 4. Propagació d'excepcions
 
 Si un mètode no captura l'excepció, aquesta puja al mètode que l'ha cridat.
 
@@ -139,7 +115,7 @@ Si `met02()` falla i no hi ha `catch`, l'error puja a `met01()` i després a `ma
 
 ---
 
-## 6. Informació útil d'una excepció
+## 5. Informació útil d'una excepció
 
 Quan capturem una excepció, l'objecte `e` ens dona informació valuosa.
 
@@ -163,6 +139,30 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 3 out
 /home/jordi/snap/netbeans/common/142/executor-snippets/run.xml:111: The following error occurred while executing this line:
 /home/jordi/snap/netbeans/common/142/executor-snippets/run.xml:68: Java returned: 1
 ```  
+
+---
+## 6. Capturar o delegar?
+
+### Capturar
+Quan el mètode sap què fer amb l'error.
+
+```java
+try {
+    servei.crearFitxerBuit("sortida.txt");
+} catch (IOException e) {
+    System.out.println("No s'ha pogut crear el fitxer.");
+}
+```
+
+### Delegar
+Quan el mètode no resol el problema i el passa al mètode superior.
+
+```java
+public void crearFitxerBuit(String nomFitxer) throws IOException {
+    FileOutputStream fitxer = new FileOutputStream(nomFitxer);
+    fitxer.close();
+}
+```
 
 ---
 
@@ -263,7 +263,9 @@ Això **no captura** una `ArrayIndexOutOfBoundsException`.
 4. [Propagació](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple04_PropagacioFinsMain.java)
 5. [Captura en mètode superior](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple05_CapturaEnMetodeSuperior.java)
 6. [Informació de l'excepció](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple06_InfoExcepcio.java)
-7. [Checked exceptions de fitxers](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple07_CheckedSenseGestionar.java)
+7. Checked exceptions de fitxers
+   1. [Sense Gestionar](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple07_CheckedSenseGestionar.java)
+   2. [Gestionada](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple07_CheckedGestionada.java)
 8. Delegació amb `throws`
    1. [No gestionada](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple08_Prova1_NoCompila.java)
    2. [Gestió parcial](../exemples/ExemplesExcepcions/src/exemplesexcepcions/Exemple08_Prova2_GestioParcial.java)

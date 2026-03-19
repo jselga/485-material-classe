@@ -3,7 +3,7 @@ package exemplesexcepcions;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
-public class Exemple07_CheckedGestionat {
+public class Exemple07_CheckedGestionada {
 
     public static void main(String[] args) {
         // Exemple intencionadament incorrecte.
