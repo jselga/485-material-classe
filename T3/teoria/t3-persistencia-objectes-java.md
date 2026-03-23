@@ -1,6 +1,8 @@
-# Persistència d’objectes en Java (ObjectStream)
+# Tema 3: Programació Orientada a Objectes i Llibreries
 
-## 🎯 Idea clau
+## Secció 5: Persistència d’objectes en Java (ObjectStream)
+
+## Idea clau
 
 La persistència permet **guardar objectes a disc** i recuperar-los posteriorment.
 
@@ -30,7 +32,7 @@ public class Alumne implements Serializable {
 }
 ```
 
-👉 Si no ho fem, obtindrem una excepció: `NotSerializableException`
+> Si no ho fem, obtindrem una excepció: `NotSerializableException`
 
 ---
 
@@ -47,7 +49,7 @@ oos.writeObject(alumne);
 oos.close();
 ```
 
-👉 Això serialitza l’objecte i el guarda al fitxer.
+> Això serialitza l’objecte i el guarda al fitxer.
 
 ---
 
@@ -62,7 +64,7 @@ Alumne a = (Alumne) ois.readObject();
 ois.close();
 ```
 
-👉 Cal fer **casting**, ja que `readObject()` retorna `Object`.
+> Cal fer **casting**, ja que `readObject()` retorna `Object`.
 
 ---
 
@@ -80,7 +82,7 @@ ArrayList<Alumne> alumnes = new ArrayList<>();
 ArrayList<Alumne> recuperats = (ArrayList<Alumne>) ois.readObject();
 ```
 
-👉 Molt útil per treballar amb dades reals.
+> Molt útil per treballar amb dades reals.
 
 ---
 
@@ -109,7 +111,7 @@ try {
 
 Cada cop que escrivim amb `FileOutputStream`, el fitxer es **sobreescriu**.
 
-👉 Si volem afegir informació, caldria una gestió més avançada.
+> Si volem afegir informació, caldria una gestió més avançada.
 
 ---
 
