@@ -4,11 +4,14 @@
  */
 package exemplesfitxers;
 
+import java.io.Serializable;
+
 /**
  *
  * @author jordi
  */
-public class Personatge {
+//public class Personatge {
+public class Personatge implements Serializable {
 
     String nom;
 

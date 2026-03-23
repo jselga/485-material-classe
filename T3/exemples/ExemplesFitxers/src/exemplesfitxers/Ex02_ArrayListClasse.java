@@ -45,14 +45,14 @@ public class Ex02_ArrayListClasse {
                     new FileInputStream(fitxer)
             );
 
-            ArrayList<String> recuperat
-                    = (ArrayList<String>) ois.readObject();
+            ArrayList<Personatge> recuperats
+                    = (ArrayList<Personatge>) ois.readObject();
 
             ois.close();
 
             System.out.println("📂 Dades recuperades:");
-            for (String nom : recuperat) {
-                System.out.println(nom);
+            for (Personatge personatge : recuperats) {
+                System.out.println(personatge.nom);
             }
 
         } catch (IOException | ClassNotFoundException e) {
