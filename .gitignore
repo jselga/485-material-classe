@@ -32,6 +32,8 @@
 /nbbuild/
 /nbdist/
 /.nb-gradle/
+*.class
+*.dat
 
 # IntelliJ
 /.idea/
