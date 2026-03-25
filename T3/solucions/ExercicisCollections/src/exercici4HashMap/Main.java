@@ -31,19 +31,15 @@ public class Main {
         cataleg.mostrarTot();
         System.out.println("\n=== PROVAR AFEGIR CODI REPETIT ===");
         boolean afegit = cataleg.afegir(new Producte("P003", "Altaveus", 39.99));
-        if (!afegit) {
-            System.out.println("No s'ha pogut afegir: el codi P003 ja existeix.");
-        }
+        String missatge = "Producte amb codi P003 ";
+        missatge += afegit ? "afegit correctament" : "no afegit. Codi Repetit";
+        System.out.println(missatge);
 
         System.out.println("\n=== ACTUALITZAR PREU ===");
         System.out.println("Actualitzant Producte amb codi P005");
         boolean actualitzat = cataleg.actualitzarPreu("P005", 49.99);
-        if (actualitzat) {
-            System.out.println("Preu actualitzat correctament.");
-        } else {
-            System.out.println("No s'ha trobat el producte.");
-        }
-
+        missatge = actualitzat ? "Preu actualitzat correctament." : "No s'ha trobat el producte.";
+        System.out.println(missatge);
         System.out.println("\n=== MOSTRAR TOT ===");
         cataleg.mostrarTot();
     }
