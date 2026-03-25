@@ -44,13 +44,12 @@ public class Ex01_ArrayList {
                     new FileInputStream(fitxer)
             );
 
-            ArrayList<String> recuperat
-                    = (ArrayList<String>) ois.readObject();
+            ArrayList<String> nomsRecuperats = (ArrayList<String>) ois.readObject();
 
             ois.close();
 
             System.out.println("📂 Dades recuperades:");
-            for (String nom : recuperat) {
+            for (String nom : nomsRecuperats) {
                 System.out.println(nom);
             }
 

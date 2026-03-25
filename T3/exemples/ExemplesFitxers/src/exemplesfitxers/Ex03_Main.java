@@ -18,8 +18,14 @@ public class Ex03_Main {
         Magatzem magatzem = new Magatzem();
 
         // Afegim dades
-        magatzem.afegir(new Material("Fusta", 10));
-        magatzem.afegir(new Material("Ferro", 5));
+//        magatzem.afegir(new Material("Fusta", 10));
+//        magatzem.afegir(new Material("Ferro", 5));
+        magatzem.afegir(new Material("Fusta", 10, 12.99));
+        magatzem.afegir(new Material("Ferro", 5, 15.99));
+        //Mostra abans de guardar
+        System.out.println("Abans de guardar");
+        System.out.println("📦 Contingut:");
+        magatzem.mostrar();
 
         // Guardar
         magatzem.guardar();
@@ -31,6 +37,7 @@ public class Ex03_Main {
         nouMagatzem.carregar();
 
         // Mostrar
+        System.out.println("Després de Recuperar");
         System.out.println("📦 Contingut:");
         nouMagatzem.mostrar();
     }

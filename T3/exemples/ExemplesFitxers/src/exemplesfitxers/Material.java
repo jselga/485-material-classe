@@ -14,10 +14,17 @@ public class Material implements Serializable {
 
     private String nom;
     private int quantitat;
+    private transient double preu;
 
     public Material(String nom, int quantitat) {
         this.nom = nom;
         this.quantitat = quantitat;
+    }
+
+    public Material(String nom, int quantitat, double preu) {
+        this.nom = nom;
+        this.quantitat = quantitat;
+        this.preu = preu;
     }
 
     public String getNom() {
@@ -28,8 +35,16 @@ public class Material implements Serializable {
         return quantitat;
     }
 
+    public double getPreu() {
+        return preu;
+    }
+
+    public void setPreu(double preu) {
+        this.preu = preu;
+    }
+
     @Override
     public String toString() {
-        return nom + " (" + quantitat + ")";
+        return nom + " (" + quantitat + ")" + "\nPreu:" + preu;
     }
 }

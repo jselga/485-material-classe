@@ -45,8 +45,7 @@ public class Ex02_ArrayListClasse {
                     new FileInputStream(fitxer)
             );
 
-            ArrayList<Personatge> recuperats
-                    = (ArrayList<Personatge>) ois.readObject();
+            ArrayList<Personatge> recuperats = (ArrayList<Personatge>) ois.readObject();
 
             ois.close();
 
