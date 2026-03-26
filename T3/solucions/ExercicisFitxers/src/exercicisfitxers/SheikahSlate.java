@@ -25,8 +25,12 @@ public class SheikahSlate {
     }
 
     public void showMonsters() {
-        for (Monster monster : monsters) {
-            System.out.println(monster);
+        if (monsters.isEmpty()) {
+            System.out.println("Monsters list is Empty.");
+        } else {
+            for (Monster monster : monsters) {
+                System.out.println(monster);
+            }
         }
     }
 
@@ -38,8 +42,6 @@ public class SheikahSlate {
 
             oos.writeObject(monsters);
             oos.close();
-
-            System.out.println("Monsters Successfully saved");
             return true;
         } catch (IOException e) {
             System.out.println("Error saving monsters: " + e.getMessage());
@@ -55,8 +57,6 @@ public class SheikahSlate {
 
             monsters = (ArrayList<Monster>) ois.readObject();
             ois.close();
-
-            System.out.println("📂Monsters Successfully loaded");
             return true;
 
         } catch (IOException | ClassNotFoundException e) {
