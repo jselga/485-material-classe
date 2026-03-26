@@ -14,7 +14,7 @@ public class Exercici2ModelGestio {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SheikahSlate slate1 = new SheikahSlate();
+        SheikahSlateAlt slate1 = new SheikahSlateAlt();
 
         slate1.addMonster(new Monster(119, "Electric Lizalfos", "These quick-witted, lizard-like monsters can be found all over Hyrule. The can emit strong electrical currents from their bodies, so don't get too close. Their horns are brimming with electricity, which will discharge and arc to nearby areas if struck by an arrow. They tend to live in desert climates."));
         slate1.addMonster(new Monster(103, "Bokoblin", "This common species is a nuisance all over Hyrule. Some have unified in the time following the Great Calamity and have formed factions of bandits. While not very clever, they are at least intelligent enough to hunt beasts and grill their meat for food. Though they're typically ferocious carnivores, they actually enjoy fruit as well."));
