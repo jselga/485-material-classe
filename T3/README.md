@@ -13,7 +13,8 @@ L'objectiu és disposar d'exemples de codi, exercicis i materials de suport per 
 T3/
 │
 ├── teoria/        → apunts i explicacions
-├── exercicis/     → exercicis per practicar
+├── exemples/      → exemples en fitxers Java
+├── exercicis/     → enunciats d'exercicis per practicar
 └── solucions/     → possibles solucions als exercicis
 ```
 
