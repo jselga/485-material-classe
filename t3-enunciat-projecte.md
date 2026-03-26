@@ -178,7 +178,7 @@ L'ordre exacte pot variar, però aquestes funcionalitats mínimes hi han de ser.
 
 No es demana una sortida única exacta, però el programa ha de ser clar i entenedor.
 
-### Exemple orientatiu: alta d'un recurs
+### Exemple: alta d'un recurs
 
 ```text
 Opció: 1
@@ -192,7 +192,7 @@ Introdueix el PEGI: 12
 Recurs afegit correctament.
 ```
 
-### Exemple orientatiu: mostrar recursos
+### Exemple: mostrar recursos
 
 ```text
 --- LLISTAT DE RECURSOS ---
@@ -211,29 +211,13 @@ Durada: 90 minuts
 Etiquetes: estratègia, familiar
 ```
 
-### Exemple orientatiu: error per codi repetit
+### Exemple: error
 
 ```text
 Error: ja existeix un recurs amb aquest codi.
 ```
 
-### Exemple orientatiu: error de cerca
 
-```text
-No s'ha trobat cap recurs amb aquest codi.
-```
-
-### Exemple orientatiu: guardat
-
-```text
-Dades guardades correctament.
-```
-
-### Exemple orientatiu: càrrega
-
-```text
-Dades carregades correctament.
-```
 
 ---
 
