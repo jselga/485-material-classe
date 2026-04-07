@@ -52,12 +52,14 @@ Per exemple:
 
 - plataforma
 - PEGI
+- Durada del prèstec segons PEGI
 
 #### Joc de taula
 
 - nombre mínim de jugadors
 - nombre màxim de jugadors
 - durada aproximada
+- Durada del prèstec calculada segons 1.2*durada aproximada
 
 > No es tracta només de guardar dades: has de modelar correctament el problema amb classes.
 
@@ -78,22 +80,10 @@ Has de decidir com aplicar-la i com organitzar la classe que la gestiona.
 
 ### 3. Ús d'un `Set` amb una classe pròpia
 
-Cada recurs ha de tenir un conjunt d'etiquetes.
+Dins la ludoteca hi ha haurà un Set de Destacats
 
-Per a aquesta pràctica:
 
-- les etiquetes **no** s'han de representar amb `String`
-- cal crear una **classe pròpia** per representar una etiqueta
-- aquesta classe ha d'implementar un criteri d'ordre natural
 
-Això implica que hauràs de pensar:
-
-- quins atributs té una etiqueta
-- quin ordre natural tindrà
-- com evitar duplicats
-- com mostrar-les
-
-> L'objectiu és aplicar correctament `Set` sobre una classe del domini i no sobre tipus simples.
 
 ---
 
@@ -108,13 +98,13 @@ L'aplicació ha de permetre fer, com a mínim, aquestes operacions:
 - modificar alguna dada d'un recurs existent
 - eliminar un recurs
 
-A més, hi ha d'haver almenys una operació relacionada amb les etiquetes.
+A més, hi ha d'haver almenys una operació relacionada amb destacats
 
 Per exemple:
 
-- afegir una etiqueta a un recurs
-- mostrar les etiquetes d'un recurs
-- cercar recursos per una etiqueta concreta
+- afegir un recurs a destacats
+- mostrar recursos destacats
+
 
 ---
 
@@ -162,9 +152,9 @@ L'aplicació ha de tenir un menú per consola amb opcions semblants a aquestes:
 3. Mostrar tots els recursos
 4. Cercar recurs per codi
 5. Modificar recurs
-6. Afegir etiqueta a un recurs
+6. Afegir un recurs a destacats
 7. Eliminar recurs
-8. Cercar recursos per etiqueta
+8. Mostrar recursos destacats
 9. Guardar dades
 10. Carregar dades
 11. Sortir
@@ -200,7 +190,6 @@ Recurs afegit correctament.
 Tipus: Videojoc
 Plataforma: Switch
 PEGI: 12
-Etiquetes: aventura, món obert
 ```
 
 ```text
@@ -208,7 +197,6 @@ Etiquetes: aventura, món obert
 Tipus: Joc de taula
 Jugadors: 3-4
 Durada: 90 minuts
-Etiquetes: estratègia, familiar
 ```
 
 ### Exemple: error
@@ -237,3 +225,22 @@ L'entrega ha d'incloure:
 - un altre `main` o una prova equivalent per comprovar directament les opcions principals de la classe gestora sense passar pel menú
 
 ---
+Falta afegir calculDuradaPrestec
+a joc taula es calcula 1.2*durada
+a videojoc segons el pegi una durada
+
+Set de de Destacats per simplificar el tema etiquetes
+
+
+- les etiquetes **no** s'han de representar amb `String`
+- cal crear una **classe pròpia** per representar una etiqueta
+- aquesta classe ha d'implementar un criteri d'ordre natural
+
+Això implica que hauràs de pensar:
+
+- quins atributs té una etiqueta
+- quin ordre natural tindrà
+- com evitar duplicats
+- com mostrar-les
+
+> L'objectiu és aplicar correctament `Set` sobre una classe del domini i no sobre tipus simples.
