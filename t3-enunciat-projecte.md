@@ -16,7 +16,7 @@ L'aplicació ha de permetre treballar amb:
 
 - diferents tipus de recursos
 - una estructura principal per emmagatzemar-los
-- un conjunt d'etiquetes per a cada recurs
+- un conjunt de recursos destacats
 - operacions CRUD (Create Read Update Delete)
 - persistència d'objectes en fitxer
 - control d'excepcions bàsic
@@ -40,7 +40,7 @@ Cada recurs ha de tenir com a mínim:
 - títol
 - any
 - disponibilitat
-- conjunt d'etiquetes
+
 
 ### Informació específica
 
@@ -52,14 +52,18 @@ Per exemple:
 
 - plataforma
 - PEGI
-- Durada del prèstec segons PEGI
+- temps d’ús calculat segons el PEGI:
+  - PEGI 7 → 60 minuts
+  - PEGI 12 → 90 minuts
+  - PEGI 18 → 120 minuts
+
 
 #### Joc de taula
 
 - nombre mínim de jugadors
 - nombre màxim de jugadors
 - durada aproximada
-- Durada del prèstec calculada segons 1.2*durada aproximada
+- temps d’ús calculat segons: `1.2 x durada aproximada`
 
 > No es tracta només de guardar dades: has de modelar correctament el problema amb classes.
 
@@ -68,6 +72,7 @@ Per exemple:
 ## Requisits obligatoris
 
 ### 1. Herència
+Has d'utilitzar **herència**.
 
 ### 2. Estructura principal amb `Map`
 
@@ -78,10 +83,15 @@ Has de decidir com aplicar-la i com organitzar la classe que la gestiona.
 
 ---
 
-### 3. Ús d'un `Set` amb una classe pròpia
+### 3. Ús d'un `Set` 
 
-Dins la ludoteca hi ha haurà un Set de Destacats
+Dins la ludoteca hi haurà un conjunt de **recursos destacats**.
 
+Aquest conjunt ha de permetre:
+
+- afegir recursos a destacats
+- evitar duplicats
+- mostrar els recursos destacats ordenats
 
 
 
@@ -160,7 +170,7 @@ L'aplicació ha de tenir un menú per consola amb opcions semblants a aquestes:
 11. Sortir
 ```
 
-L'ordre exacte pot variar, però aquestes funcionalitats mínimes hi han de ser.
+
 
 ---
 
@@ -190,13 +200,14 @@ Recurs afegit correctament.
 Tipus: Videojoc
 Plataforma: Switch
 PEGI: 12
+Temps d'ús: 90 min
 ```
 
 ```text
 [J003] Catan - 1995 - Disponible
 Tipus: Joc de taula
 Jugadors: 3-4
-Durada: 90 minuts
+Temps d'ús: 90 minuts
 ```
 
 ### Exemple: error
@@ -225,22 +236,3 @@ L'entrega ha d'incloure:
 - un altre `main` o una prova equivalent per comprovar directament les opcions principals de la classe gestora sense passar pel menú
 
 ---
-Falta afegir calculDuradaPrestec
-a joc taula es calcula 1.2*durada
-a videojoc segons el pegi una durada
-
-Set de de Destacats per simplificar el tema etiquetes
-
-
-- les etiquetes **no** s'han de representar amb `String`
-- cal crear una **classe pròpia** per representar una etiqueta
-- aquesta classe ha d'implementar un criteri d'ordre natural
-
-Això implica que hauràs de pensar:
-
-- quins atributs té una etiqueta
-- quin ordre natural tindrà
-- com evitar duplicats
-- com mostrar-les
-
-> L'objectiu és aplicar correctament `Set` sobre una classe del domini i no sobre tipus simples.
