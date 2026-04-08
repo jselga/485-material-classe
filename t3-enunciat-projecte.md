@@ -15,7 +15,7 @@ Has de desenvolupar una aplicació de consola que permeti gestionar una col·lec
 L'aplicació ha de permetre treballar amb:
 
 - diferents tipus de recursos
-- una estructura principal per emmagatzemar-los
+- una estructura principal per emmagatzemar-los i gestionar-los
 - un conjunt de recursos destacats
 - operacions CRUD (Create Read Update Delete)
 - persistència d'objectes en fitxer
@@ -229,10 +229,12 @@ Error: ja existeix un recurs amb aquest codi.
 
 L'entrega ha d'incloure:
 
-- el projecte complet
-- totes les classes necessàries
-- el codi font funcional
-- un `main` amb menú per interactuar amb l'aplicació
-- un altre `main` o una prova equivalent per comprovar directament les opcions principals de la classe gestora sense passar pel menú
+- el projecte complet: CognomsNom_T3_Pt1 comprimit en zip amb:
+   - totes les classes necessàries
+   - el codi font funcional
+   - explicacions de les decisions preses en el disseny del programa (comentaris, document markdown, pdf,...)
+   - un `main` amb menú per interactuar amb l'aplicació
+   - un altre `main` o una prova equivalent per comprovar directament les opcions principals de la classe gestora sense passar pel menú
+     (cal tenir en compte fer saltar les excepcions pertinents com per exemple: joc repetit, inexistent)
 
 ---
