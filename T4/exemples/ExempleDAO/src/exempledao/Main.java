@@ -17,7 +17,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("===Exemple DAO===");
-        
+
         provaConnexio();
         provaPublisher();
         provaBook();
@@ -35,19 +35,19 @@ public class Main {
     private static void provaPublisher() {
         System.out.println("\n--- Test Publisher DAO ---");
         PublisherDao dao = new PublisherDao();
-        
-        Publisher p1 = new Publisher(1, "Editorial Nova", "Carrer Major 10");
+
+        Publisher p1 = new Publisher(3, "Editorial Nova", "Carrer Major 10");
         dao.insertar(p1);
-        
+
         Publisher cercat = dao.buscarPerCodi(1);
         System.out.println("Buscar: " + cercat);
-        
+
         ArrayList<Publisher> tots = dao.llistarTots();
         System.out.println("Llistar: " + tots);
-        
+
         p1.setName("Editorial Actualitzada");
         dao.actualitzar(p1);
-        
+
         dao.eliminar(1);
     }
 
@@ -55,41 +55,41 @@ public class Main {
         System.out.println("\n--- Test Book DAO ---");
         BookDao bookDao = new BookDao();
         PublisherDao publisherDao = new PublisherDao();
-        
-        Publisher p2 = new Publisher(2, "Segona Editorial", "Carrer Nou 5");
+
+        Publisher p2 = new Publisher(4, "Segona Editorial", "Carrer Nou 5");
         publisherDao.insertar(p2);
-        
+
         Book llibre = new Book();
         llibre.setIsbn("978-84-12345");
         llibre.setName("Llibre d'Exemple");
         llibre.setPublisher(p2);
         llibre.setPublishDate(Date.valueOf(LocalDate.now()));
         llibre.setPrice(25.99);
-        
+
         bookDao.insertar(llibre);
-        
+
         Book cercat = bookDao.buscarPerIsbn("978-84-12345");
         System.out.println("Buscar: " + cercat);
-        
+
         ArrayList<Book> tots = bookDao.llistarTots();
         System.out.println("Llistar: " + tots);
-        
+
         ChapterDao chapterDao = new ChapterDao();
         Chapter cap1 = new Chapter();
-        cap1.setNum(1);
-        cap1.setTitle("Capitol 1: Introduccio");
+        cap1.setNum(3);
+        cap1.setTitle("Capitol 3");
         cap1.setNumPages(10);
         chapterDao.insertar(cap1, "978-84-12345");
-        
+
         Chapter cap2 = new Chapter();
-        cap2.setNum(2);
-        cap2.setTitle("Capitol 2: Contingut");
+        cap2.setNum(4);
+        cap2.setTitle("Capitol 4");
         cap2.setNumPages(25);
         chapterDao.insertar(cap2, "978-84-12345");
-        
+
         ArrayList<Chapter> caps = chapterDao.buscarPerBookIsbn("978-84-12345");
         System.out.println("Chapters: " + caps);
-        
+
         chapterDao.eliminar("978-84-12345");
         bookDao.eliminar("978-84-12345");
         publisherDao.eliminar(2);

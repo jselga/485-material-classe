@@ -38,7 +38,7 @@ public class BDUtil {
         stmt.executeUpdate();
         stmt.close();
         query = "CREATE TABLE book "
-                + "(isbn varchar(10),"
+                + "(isbn varchar(20),"
                 + " book_name text,"
                 + " publisher_code integer, publish_date date, price integer,"
                 + " CONSTRAINT book_pkey PRIMARY KEY (isbn),"
@@ -54,7 +54,7 @@ public class BDUtil {
         query = "CREATE TABLE chapter "
                 + "(num integer NOT NULL,"
                 + "  title text, numpages integer, "
-                + "  book_isbn varchar(10), "
+                + "  book_isbn varchar(20), "
                 + " CONSTRAINT chapter_pkey PRIMARY KEY (num), "
                 + " CONSTRAINT chapter_book_isbn_fkey FOREIGN KEY (book_isbn) "
                 + " REFERENCES book (isbn) MATCH SIMPLE "

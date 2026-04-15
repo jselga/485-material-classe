@@ -56,7 +56,7 @@ public class ExempleJDBC {
                 System.exit(0);
             }
 //            BDUtil.createBDMysql(dbName);
-//            BDUtil.createEstructuraMysql(); //un sol cop
+            BDUtil.createEstructuraMysql(); //un sol cop
             BDUtil.netejaTaules();
             insertaBook("12345", "Nom game", 0, Date.valueOf(LocalDate.now()), 27);
             consultaBook("12345");
