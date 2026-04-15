@@ -23,6 +23,7 @@
 *.swp
 *.swo
 *.dat
+
 # =========================
 # IDE configurations
 # =========================
@@ -32,6 +33,13 @@
 /nbbuild/
 /nbdist/
 /.nb-gradle/
+nbproject/build-impl.xml
+nbproject/genfiles.properties
+nbproject/project.properties
+build.xml
+manifest.mf
+.netbeans_automatic_build
+.netbeans_update_resources
 
 # IntelliJ
 /.idea/
@@ -45,9 +53,17 @@
 # =========================
 .DS_Store
 Thumbs.db
+
+# =========================
+# Specific project paths
+# =========================
 /T3/exemples/ExemplesCollections/build/
 /T3/exemples/ExemplesCollections/nbproject/private/
 /T3/exemples/ExemplesExcepcions/nbproject/private/
 /T3/exemples/ExemplesExcepcions/build/
 /T3/exemples/ExemplesFitxers/nbproject/private/
 /T3/exemples/ExemplesFitxers/build/
+/T4/exemples/M3_UF6_JDBC/build/
+/T4/exemples/M3_UF6_JDBC/nbproject/private/
+/T4/exemples/ExempleDAO/nbproject/private/
+/T4/exemples/ExempleDAO/build/
