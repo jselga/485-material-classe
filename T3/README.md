@@ -50,42 +50,44 @@ Per executar els exemples necessites:
 
 ## ▶️ Com treballar amb el material
 
-1. **Clona el repositori**
+1. **Clona el repositori** (si no ho has fet abans)
 
 ```bash
 git clone https://github.com/jselga/485-material-classe.git
 ```
 
-2. **Mantén el material actualitzat**
+2. **Mantén el material actualitzat** (abans de cada classe)
 
 ```bash
+git fetch origin
 git pull origin
 ```
 
-3. **Per accedir a les solucions dels exercicis**
+3. **Canviar de branca** (per accedir a les solucions)
+
+```bash
+git switch solucions-exercicis    # per anar a solucions
+git switch main                  # per tornar al material base
+```
+
+4. **Actualitzar la branca de solucions** (si estàs a solucions-exercicis)
 
 ```bash
 git switch solucions-exercicis
+git fetch origin
+git pull origin solucions-exercicis
 ```
 
-4. **Per tornar a la branca principal**
+5. **Canviar de branca i actualitzar** (en general)
 
 ```bash
-git switch main
+git switch <nom-branca>
+git fetch origin
+git pull origin <nom-branca>
 ```
+   
 
-5. **Per treballar amb un tema concret**
 
-```bash
-cd T3
-```
-
-6. **Executar un exemple**
-
-```bash
-javac ExempleArrayList.java
-java ExempleArrayList
-```
 
 ---
 
