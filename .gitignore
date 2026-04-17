@@ -40,6 +40,8 @@ build.xml
 manifest.mf
 .netbeans_automatic_build
 .netbeans_update_resources
+*.class
+*.dat
 
 # IntelliJ
 /.idea/
@@ -69,3 +71,7 @@ Thumbs.db
 /T4/exemples/ExempleDAO/build/
 /T4/exemples/ExempleJDBC/nbproject/private/
 /T4/exemples/ExempleJDBC/build/
+/T3/solucions/ExercicisExcepcions/nbproject/private/
+/T3/solucions/ExercicisExcepcions/build/
+/T3/solucions/ExercicisFitxers/nbproject/private/
+/T3/solucions/ExercicisFitxers/build/
