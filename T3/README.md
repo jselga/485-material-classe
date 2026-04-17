@@ -1,9 +1,9 @@
 # 📚 Material de Classe – Mòdul 0485 Programació
-## Tema 3 – Col·leccions en Java
+## Tema 3 – Java: POO, Col·leccions i Persistència
 
-Aquest repositori conté el **material utilitzat a classe** per treballar el **Tema 3: Col·leccions en Java** dins del mòdul **0485 - Programació** del cicles formatius de **Desenvolupament d'Aplicacions Multiplataforma (DAM)** **Desenvolupament d'Aplicacions Web (DAW)**.
+Aquest repositori conté el **material utilitzat a classe** per treballar el **Tema 3** dins del mòdul **0485 - Programació** del cicles formatius de **Desenvolupament d'Aplicacions Multiplataforma (DAM)** i **Desenvolupament d'Aplicacions Web (DAW)**.
 
-L'objectiu és disposar d'exemples de codi, exercicis i materials de suport per practicar amb les principals estructures de col·leccions de Java.
+L'objectiu és disposar d'exemples de codi, exercicis i materials de suport per entendre els fonaments de Java: **programació orientada a objectes, col·leccions, exceptions i persistència**.
 
 ---
 
@@ -22,20 +22,19 @@ T3/
 
 ## 🎯 Continguts del tema
 
-En aquest tema treballarem les principals **col·leccions de Java**:
+El tema s'estructura en **5 blocs**:
 
-- `ArrayList`
-- `HashSet`
-- `TreeSet`
-- `HashMap`
-- Iteració amb `for`, `Iterator` i `forEach`
+1. **Fonaments de POO** – classes, objectes, encapsulació
+2. **Herència i polimorfisme** – extends, @Override, super
+3. **Col·leccions de Java** – List, Set, Map i iteradors
+4. **Excepcions** – try-catch, throws, exceptions personalitzades
+5. **Persistència** – llegir i escriure fitxers (objectes serialitzats)
 
-També veurem conceptes relacionats com:
+Conceptes clau inclou:
 
 - Classes genèriques (`<T>`)
+- Gestió de duplicats i ordenació
 - Diferència entre **List, Set i Map**
-- Gestió de duplicats
-- Ordenació d'elements
 
 ---
 
@@ -49,21 +48,39 @@ Per executar els exemples necessites:
 
 ---
 
-## ▶️ Com executar un exemple
+## ▶️ Com treballar amb el material
 
-1. Clona el repositori
+1. **Clona el repositori**
 
 ```bash
 git clone https://github.com/jselga/485-material-classe.git
 ```
 
-2. Entra a la carpeta del tema
+2. **Mantén el material actualitzat**
 
 ```bash
-cd 485-material-classe/T3
+git pull origin
 ```
 
-3. Obre el projecte amb el teu IDE preferit o compila manualment
+3. **Per accedir a les solucions dels exercicis**
+
+```bash
+git switch solucions-exercicis
+```
+
+4. **Per tornar a la branca principal**
+
+```bash
+git switch main
+```
+
+5. **Per treballar amb un tema concret**
+
+```bash
+cd T3
+```
+
+6. **Executar un exemple**
 
 ```bash
 javac ExempleArrayList.java
@@ -76,11 +93,11 @@ java ExempleArrayList
 
 Els exercicis estan pensats perquè l'alumne practiqui:
 
-- creació de col·leccions
-- afegir i eliminar elements
-- cercar dades
-- evitar duplicats
-- recórrer col·leccions
+- crear classes i usar objectes
+- implementar herència
+- treballar amb col·leccions (ArrayList, HashSet, HashMap)
+- gestionar errors amb exceptions
+- llegir i escriure fitxers
 
 Intenta **resoldre els exercicis abans de mirar les solucions**.
 
@@ -100,6 +117,12 @@ https://docs.oracle.com/javase/tutorial/collections/
 
 Material preparat per **Departament d'Informàtica**  
 Professorat de Desenvolupament d'Aplicacions Web i Multiplataforma
+
+---
+
+## 📝 Resum per a l'examen
+
+Per a una revisió ràpida dels punts clau del Tema 3, consulta el fitxer [RESUM.md](./RESUM.md).
 
 ---
 
