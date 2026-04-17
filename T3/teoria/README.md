@@ -103,6 +103,12 @@ Professorat de Desenvolupament d'Aplicacions Web i Multiplataforma
 
 ---
 
+## 📝 Resum per a l'examen
+
+Per a una revisió ràpida dels punts clau del Tema 3, consulta el fitxer [RESUM.md](./RESUM.md).
+
+---
+
 ## 📄 Llicència
 
 Aquest material és per a **ús educatiu dins del curs**.
