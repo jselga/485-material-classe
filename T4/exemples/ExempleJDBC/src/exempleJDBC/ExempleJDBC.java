@@ -25,7 +25,7 @@ import model.Publisher;
 public class ExempleJDBC {
 
     static final String url = "jdbc:mysql://localhost:3306/";
-    static final String dbName = "llibreria2";                  //Nom de la nostra BBDD
+    static final String dbName = "llibreria";                  //Nom de la nostra BBDD
     static final String driver = "com.mysql.cj.jdbc.Driver";
     static final String userName = "root";
     static final String password = "root";

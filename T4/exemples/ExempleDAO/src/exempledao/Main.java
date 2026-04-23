@@ -56,7 +56,7 @@ public class Main {
         BookDao bookDao = new BookDao();
         PublisherDao publisherDao = new PublisherDao();
 
-        Publisher p2 = new Publisher(4, "Segona Editorial", "Carrer Nou 5");
+        Publisher p2 = new Publisher(5, "Segona Editorial", "Carrer Nou 5");
         publisherDao.insertar(p2);
 
         Book llibre = new Book();
@@ -76,13 +76,13 @@ public class Main {
 
         ChapterDao chapterDao = new ChapterDao();
         Chapter cap1 = new Chapter();
-        cap1.setNum(3);
+        cap1.setNum(5);
         cap1.setTitle("Capitol 3");
         cap1.setNumPages(10);
         chapterDao.insertar(cap1, "978-84-12345");
 
         Chapter cap2 = new Chapter();
-        cap2.setNum(4);
+        cap2.setNum(6);
         cap2.setTitle("Capitol 4");
         cap2.setNumPages(25);
         chapterDao.insertar(cap2, "978-84-12345");

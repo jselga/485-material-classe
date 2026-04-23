@@ -59,32 +59,22 @@ git clone https://github.com/jselga/485-material-classe.git
 2. **Mantén el material actualitzat** (abans de cada classe)
 
 ```bash
-git fetch origin
-git pull origin
+git pull
 ```
 
 3. **Canviar de branca** (per accedir a les solucions)
 
 ```bash
-git switch solucions-exercicis    # per anar a solucions
-git switch main                  # per tornar al material base
+git checkout solucions-exercicis    # per anar a solucions
 ```
 
-4. **Actualitzar la branca de solucions** (si estàs a solucions-exercicis)
-
+4. **Actualitzar la branca actual** (si estàs a solucions-exercicis)
+Un cop dins la branca
 ```bash
-git switch solucions-exercicis
-git fetch origin
-git pull origin solucions-exercicis
+git pull
 ```
-
-5. **Canviar de branca i actualitzar** (en general)
-
-```bash
-git switch <nom-branca>
-git fetch origin
-git pull origin <nom-branca>
-```
+5. **Evitar conflictes de versions**
+Feu una copia de la carpeta del repositori per poder fer els vostres canvis. La proporcionada a classe NO es toca. Només lectura.   
    
 
 
