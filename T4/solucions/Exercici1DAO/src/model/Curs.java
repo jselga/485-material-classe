@@ -3,19 +3,22 @@ package model;
 public class Curs {
 
     private int id;
+    private String codi;
     private String nom;
     private String nivell;
 
     public Curs() {
     }
 
-    public Curs(int id, String nom, String nivell) {
+    public Curs(int id, String codi, String nom, String nivell) {
         this.id = id;
+        this.codi = codi;
         this.nom = nom;
         this.nivell = nivell;
     }
 
-    public Curs(String nom, String nivell) {
+    public Curs(String codi, String nom, String nivell) {
+        this.codi = codi;
         this.nom = nom;
         this.nivell = nivell;
     }
@@ -26,6 +29,14 @@ public class Curs {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCodi() {
+        return codi;
+    }
+
+    public void setCodi(String codi) {
+        this.codi = codi;
     }
 
     public String getNom() {
@@ -46,6 +57,6 @@ public class Curs {
 
     @Override
     public String toString() {
-        return "Curs{id=" + id + ", nom='" + nom + "', nivell='" + nivell + "'}";
+        return "Curs{id=" + id + ", codi='" + codi + "', nom='" + nom + "', nivell='" + nivell + "'}";
     }
 }

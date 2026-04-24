@@ -68,29 +68,31 @@ public class App {
         System.out.println(curs == null ? "No s'ha trobat cap curs." : curs);
     }
 
-    private void inserirCurs() {
+private void inserirCurs() {
+        String codi = Utils.llegirText(scanner, "Codi: ");
+        Utils.validarCodi(codi);
         String nom = Utils.llegirText(scanner, "Nom: ");
-        String nivell = Utils.llegirText(scanner, "Nivell: ");
         Utils.validarNom(nom);
+        String nivell = Utils.llegirText(scanner, "Nivell: ");
         Utils.validarNivell(nivell);
-        cursDao.inserir(new Curs(nom.trim(), nivell.trim()));
+        cursDao.inserir(new Curs(codi.trim(), nom.trim(), nivell.trim()));
         System.out.println("Curs inserit correctament.");
     }
 
     private void actualitzarCurs() {
         int id = Utils.llegirEnter(scanner, "Id del curs: ");
         Utils.validarId(id, "L'id del curs ha de ser positiu.");
-        // Busco si existeix la id introduïda per l'usuari
         Curs curs = cursDao.buscarPerId(id);
         if (curs == null) {
             throw new IllegalArgumentException("No existeix cap curs amb id " + id + ".");
         }
-        //Demano la resta de dades si exiteix id
+        String codi = Utils.llegirText(scanner, "Nou codi: ");
+        Utils.validarCodi(codi);
         String nom = Utils.llegirText(scanner, "Nou nom: ");
         Utils.validarNom(nom);
         String nivell = Utils.llegirText(scanner, "Nou nivell: ");
         Utils.validarNivell(nivell);
-        //Preparo l'objecte per actualitzar
+        curs.setCodi(codi.trim());
         curs.setNom(nom.trim());
         curs.setNivell(nivell.trim());
         cursDao.actualitzar(curs);

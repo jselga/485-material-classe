@@ -10,6 +10,15 @@ public class Utils {
         }
     }
 
+    public static void validarCodi(String codi) {
+        if (codi == null || codi.isBlank()) {
+            throw new IllegalArgumentException("El codi del curs no pot estar buit.");
+        }
+        if (codi.length() > 10) {
+            throw new IllegalArgumentException("El codi no pot tenir més de 10 caràcters.");
+        }
+    }
+
     public static void validarNivell(String nivell) {
         if (nivell == null || nivell.isBlank()) {
             throw new IllegalArgumentException("El nivell no pot estar buit.");
