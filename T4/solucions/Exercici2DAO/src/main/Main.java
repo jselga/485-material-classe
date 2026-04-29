@@ -1,4 +1,4 @@
-package exercici2dao;
+package main;
 
 import DAO.AlumneDao;
 import DAO.CursDao;
@@ -7,7 +7,7 @@ import model.Curs;
 
 import java.util.List;
 
-public class Exercici2DAO {
+public class Main {
 
     public static void main(String[] args) {
         CursDao cursDao = new CursDao();
@@ -51,26 +51,22 @@ public class Exercici2DAO {
                 System.out.println("   Curs 3 no trobat.");
             }
 
-            // Mostrar tots els alumnes i cursos
-            System.out.println("\n   --- Alumnes i cursos (despres d'inserir) ---");
+            // Mostrar tots cursos
+            System.out.println("\n   --- Cursos (despres d'inserir) ---");
             System.out.println("   CURSOS:");
             List<Curs> cursos = cursDao.llistarTots();
             for (Curs c : cursos) {
                 System.out.println("   - " + c);
             }
+
+
+            // 2) Llistar tots els alumnes mostrant tambe el nom del curs
+            System.out.println("\n2) Llistar tots els alumnes amb el nom del curs:");
             System.out.println("   ALUMNES:");
             List<Alumne> alumnes = alumneDao.llistarTotsAmbCurs();
             for (Alumne a : alumnes) {
                 System.out.println("   - " + a);
             }
-
-            // 2) Llistar tots els alumnes mostrant tambe el nom del curs
-            System.out.println("\n2) Llistar tots els alumnes amb el nom del curs:");
-            alumnes = alumneDao.llistarTotsAmbCurs();
-            for (Alumne a : alumnes) {
-                System.out.println("   " + a);
-            }
-
             // 3) Donat l'id d'un curs, mostrar les dades del curs i el llistat dels seus alumnes
             System.out.println("\n3) Mostrar curs 1 i els seus alumnes:");
             Curs curs = cursDao.buscarPerId(1);

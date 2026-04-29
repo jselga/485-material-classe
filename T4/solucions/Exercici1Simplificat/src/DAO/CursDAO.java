@@ -27,17 +27,6 @@ public class CursDAO {
         }
     }
 
-    public void netejarTaula() throws SQLException {
-        //        String query = "DELETE FROM cursos";
-        String query = "TRUNCATE TABLE cursos";
-        //Fem servir TRUNCATE en comptes de DELETE per poder reinciar els autoincriment
-
-
-        try (PreparedStatement stmt = conn.prepareStatement(query)) {
-            stmt.executeUpdate();
-        }
-    }
-
     public Curs buscarPerId(int id) throws SQLException {
         String query = "SELECT * FROM cursos WHERE id = ?";
 
@@ -95,6 +84,16 @@ public class CursDAO {
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setInt(1, id);
             return stmt.executeUpdate() > 0;
+        }
+    }
+     public void netejarTaula() throws SQLException {
+        //        String query = "DELETE FROM cursos";
+        String query = "TRUNCATE TABLE cursos";
+        //Fem servir TRUNCATE en comptes de DELETE per poder reinciar els autoincriment
+
+
+        try (PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.executeUpdate();
         }
     }
 }

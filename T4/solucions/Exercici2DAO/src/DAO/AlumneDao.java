@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class AlumneDao {
 
-    public void inserir(Alumne alumne) {
+    public boolean inserir(Alumne alumne) {
         String sql = "INSERT INTO alumnes (nom, cognoms, email, curs_id) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = DatabaseConnection.getConnection();
@@ -18,7 +18,7 @@ public class AlumneDao {
             ps.setString(2, alumne.getCognoms());
             ps.setString(3, alumne.getEmail());
             ps.setInt(4, alumne.getCurs().getId());
-            ps.executeUpdate();
+            return ps.executeUpdate()>0;
 
         } catch (SQLException e) {
             throw new RuntimeException("No s'ha pogut inserir l'alumne '" + alumne.getNom() + "'.", e);
